@@ -1,0 +1,210 @@
+if game.PlaceId == 596894229 then
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "BsK Hub | Elemental Adventure", HidePremium = false, IntroText = "BsK Hub", SaveConfig = true, ConfigFolder = "BsKConfig"})
+
+
+-- Values
+_G.autoFarm = true
+
+-- Functions
+function autoFarm()
+    while _G.autoFarm == true do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5891, 8, 4856)
+
+        wait (5)
+
+        local args = {
+            [1] = "AdvanceStep",
+            [2] = {
+                ["QuestName"] = "EarthQuest2",
+                ["Step"] = 1
+            }
+        }
+        
+        game:GetService("ReplicatedStorage").NetworkFolder.GameFunction:InvokeServer(unpack(args))
+        
+        wait(1)
+        
+        local args = {
+            [1] = "AdvanceStep",
+            [2] = {
+                ["QuestName"] = "EarthQuest2",
+                ["Step"] = 2
+            }
+        }
+        
+        game:GetService("ReplicatedStorage").NetworkFolder.GameFunction:InvokeServer(unpack(args))
+        
+        wait(1)
+        
+        local args = {
+            [1] = "AdvanceStep",
+            [2] = {
+                ["QuestName"] = "EarthQuest2",
+                ["Step"] = 3
+            }
+        }
+        
+        game:GetService("ReplicatedStorage").NetworkFolder.GameFunction:InvokeServer(unpack(args))
+        
+        wait(1)
+        
+        local args = {
+            [1] = "AdvanceStep",
+            [2] = {
+                ["QuestName"] = "EarthQuest2",
+                ["Step"] = 4
+            }
+        }
+        
+        game:GetService("ReplicatedStorage").NetworkFolder.GameFunction:InvokeServer(unpack(args))
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5895, 54, 5461)
+
+        wait (5)
+         
+        local args = {
+            [1] = "AdvanceStep",
+            [2] = {
+                ["QuestName"] = "EarthQuest3",
+                ["Step"] = 1
+            }
+        }
+        
+        game:GetService("ReplicatedStorage").NetworkFolder.GameFunction:InvokeServer(unpack(args))
+        
+        wait(1)
+        
+        local args = {
+            [1] = "AdvanceStep",
+            [2] = {
+                ["QuestName"] = "EarthQuest3",
+                ["Step"] = 2
+            }
+        }
+        
+        game:GetService("ReplicatedStorage").NetworkFolder.GameFunction:InvokeServer(unpack(args))
+        
+        wait(1)
+        
+        local args = {
+            [1] = "AdvanceStep",
+            [2] = {
+                ["QuestName"] = "EarthQuest3",
+                ["Step"] = 3
+            }
+        }
+        
+        game:GetService("ReplicatedStorage").NetworkFolder.GameFunction:InvokeServer(unpack(args))
+        
+        
+        wait() 
+    end
+end
+
+-- Tabs
+
+local FarmTab = Window:MakeTab({
+	Name = "AutoFarm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local TeleportTab = Window:MakeTab({
+	Name = "Teleports",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+-- Toggles
+
+FarmTab:AddToggle({
+	Name = "AutoFarm",
+	Default = false,
+	Callback = function(Value)
+		_G.autoFarm = Value
+        autoFarm()
+	end    
+})
+
+-- Buttons
+
+TeleportTab:AddButton({
+	Name = "Upward Wind Temple",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1693, 411, -2276)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Downward Wind Temple",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(7957, 183, -2057)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Northen Lquid City",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(8465, 74, 789)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Southern Lquid Ruins",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(113, 11, 465)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Swamp",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3719, 7, 3011)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Rock Realm City",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5884, 8, 4731)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Desert&Desert Town",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3553, 7, 3968)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Warriors Island",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1794, 11, 2264)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Flame Harbor",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5163, 21, -2631)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Flame City",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6380, 162, -6489)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Ancient Flame Temple",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6176, 132, 185)
+  	end    
+})
+
+end
+OrionLib:Init()
